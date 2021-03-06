@@ -32,6 +32,7 @@ class FoodDetailActivity : AppCompatActivity() {
 
     companion object {
         const val FOOD_EXTRA = "FOOD_EXTRA"
+        private const val TOTAL_STATE = "TOTAL_STATE"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +44,19 @@ class FoodDetailActivity : AppCompatActivity() {
 
         initUI()
         setUI()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(TOTAL_STATE, total)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        total = savedInstanceState.getInt(TOTAL_STATE)
+
+        updateCostUI()
+        updateTotalUI()
     }
 
     private fun initUI() {
