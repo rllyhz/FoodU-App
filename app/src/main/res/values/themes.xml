@@ -39,9 +39,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
-    <style name="MyText" parent="TextAppearance.AppCompat.Medium">
-        <item name="android:textSize">16sp</item>
-    </style>
+    <style name="MyText" parent="TextAppearance.AppCompat.Medium" />
+
+    <style name="MyText.Large" parent="TextAppearance.AppCompat.Large" />
 
 
     <!--  For Food Item -->
@@ -84,10 +84,44 @@
     </style>
 
 
+    <!-- For About -->
+    <style name="MyText.About.WithBackground" parent="MyText">
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">@dimen/padding_large</item>
+        <item name="android:drawablePadding">@dimen/padding_medium</item>
+        <item name="android:background">@drawable/bg_grey_light_half_rounded</item>
+    </style>
+
+    <style name="MyText.About.WithBackground.BirthDate" parent="MyText.About.WithBackground">
+        <item name="android:text">@string/creator_birthdate</item>
+        <item name="drawableStartCompat">@drawable/ic_calendar</item>
+    </style>
+
+    <style name="MyText.About.WithBackground.Job" parent="MyText.About.WithBackground">
+        <item name="android:text">@string/creator_job</item>
+        <item name="drawableStartCompat">@drawable/ic_work</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+    </style>
+
+    <style name="MyText.About.WithBackground.Email" parent="MyText.About.WithBackground">
+        <item name="android:text">@string/creator_email</item>
+        <item name="drawableStartCompat">@drawable/ic_email</item>
+        <item name="android:layout_marginTop">@dimen/margin_medium</item>
+    </style>
+
+
     <!--  For Buttons -->
     <style name="MyButton.FoodItem" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:text">@string/food_item_cta_text</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:layout_marginBottom">@dimen/margin_small</item>
+    </style>
+
+    <style name="MyButton.Fab" parent="Widget.Design.FloatingActionButton">
+        <item name="android:layout_margin">@dimen/margin_medium</item>
+        <item name="android:src">@drawable/ic_fav</item>
+        <item name="tint">@color/white</item>
+        <item name="layout_anchorGravity">bottom|right</item>
+        <item name="maxImageSize">28dp</item>
     </style>
 </resources>
