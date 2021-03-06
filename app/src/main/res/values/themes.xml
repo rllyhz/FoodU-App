@@ -136,14 +136,14 @@
         <item name="android:layout_marginEnd">@dimen/margin_medium</item>
     </style>
 
-    <style name="FoodDetail.Owner" parent="MyText.FoodItem.Owner">
+    <style name="FoodDetail.Owner" parent="MyText">
         <item name="android:gravity">center</item>
         <item name="android:layout_marginTop">0dp</item>
         <item name="android:layout_marginStart">@dimen/margin_medium</item>
         <item name="android:layout_marginEnd">@dimen/margin_medium</item>
     </style>
 
-    <style name="FoodDetail.Location" parent="MyText.FoodItem.Owner">
+    <style name="FoodDetail.Location" parent="MyText">
         <item name="android:layout_marginStart">@dimen/margin_small</item>
         <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:ellipsize">end</item>
