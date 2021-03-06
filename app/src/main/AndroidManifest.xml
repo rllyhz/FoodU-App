@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodUApp">
+        <activity android:name=".FoodDetailActivity"></activity>
         <activity
             android:name=".AboutActivity"
-            android:theme="@style/Theme.FoodUApp.NoActionBar"></activity>
+            android:theme="@style/Theme.FoodUApp.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/SplashScreenTheme">
