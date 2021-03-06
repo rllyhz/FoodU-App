@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FoodU App</string>
+
+    <string name="food_item_name">Food Name</string>
+    <string name="food_item_owner">Warung Mas Pur</string>
+    <string name="food_item_location">Semarang city, Indonesia</string>
+    <string name="food_item_distance">12,3 KM</string>
+    <string name="food_item_cost">12.000 IDR</string>
+    <string name="food_item_cta_text">Lihat Detail</string>
+    <string name="address_headline_text">Alamat</string>
+    <string name="description_headline_text">Deskripsi</string>
+    <string name="detail_order_success_message">Pesanan ditambahkan!</string>
+    <string name="detail_order_error_message">Masukan jumlah terlebih dahulu!</string>
+
+    <string name="menu_item_about_me">About Me</string>
+
+    <string name="creator_name">Rully Ihza Mahendra</string>
+    <string name="creator_email">rullyihza00@gmail.com</string>
+    <string name="creator_birthdate">29 September 1999</string>
+    <string name="creator_job">Mahasiswa</string>
+    <string name="about_social_media_headline">Sosial Media</string>
+    <string name="linkedin_link">https://www.linkedin.com/in/rully-ihza-mahendra-275a591a5</string>
+    <string name="instagram_link">https://www.instagram.com/rllyhz/</string>
+    <string name="github_link">https://www.github.com/rllyhz/</string>
+
+    <string name="appreciation_text">Terima kasih</string>
+</resources>
