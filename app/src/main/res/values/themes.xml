@@ -147,7 +147,7 @@
         <item name="android:layout_marginStart">@dimen/margin_small</item>
         <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:ellipsize">end</item>
-        <item name="maxLines">1</item>
+        <item name="android:maxLines">2</item>
         <item name="android:textColor">@color/grey</item>
         <item name="android:textSize">18sp</item>
     </style>
@@ -156,6 +156,8 @@
         <item name="android:layout_marginTop">@dimen/margin_small</item>
         <item name="android:layout_marginStart">@dimen/margin_small</item>
         <item name="android:textColor">@color/grey</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">5</item>
         <item name="android:textSize">18sp</item>
     </style>
 </resources>

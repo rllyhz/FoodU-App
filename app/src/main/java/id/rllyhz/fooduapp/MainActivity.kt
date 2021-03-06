@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), FoodAdapter.OnItemClickCallback {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setTheme(R.style.Theme_FoodUApp)
+        setTheme(R.style.Theme_FoodUApp) // remove splash theme, for easily showing splashscreen if there is no process in background
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO) // this app dosn't support dark mode
         setContentView(R.layout.activity_main)
 
@@ -29,13 +29,18 @@ class MainActivity : AppCompatActivity(), FoodAdapter.OnItemClickCallback {
     private fun initUI() {
         rvFoodList = findViewById(R.id.rv_food_list)
         foodAdapter = FoodAdapter(this, DataHelper.foodList)
+        foodAdapter.setOnItemClickCallback(this)
 
         rvFoodList.layoutManager = GridLayoutManager(this, 1)
         rvFoodList.adapter = foodAdapter
     }
 
     override fun ctaItemClicked(food: Food) {
-        //
+        val foodDetailIntent = Intent(this@MainActivity, FoodDetailActivity::class.java).apply {
+            putExtra(FoodDetailActivity.FOOD_EXTRA, food)
+        }
+
+        startActivity(foodDetailIntent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
