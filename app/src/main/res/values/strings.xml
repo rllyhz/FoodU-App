@@ -4,6 +4,7 @@
     <string name="food_item_name">Food Name</string>
     <string name="food_item_owner">Warung Mas Pur</string>
     <string name="food_item_location">Semarang city, Indonesia</string>
+    <string name="food_item_description">Delicious food</string>
     <string name="food_item_distance">12,3 KM</string>
     <string name="food_item_cost">12.000 IDR</string>
     <string name="food_item_cta_text">Lihat Detail</string>
@@ -11,6 +12,7 @@
     <string name="description_headline_text">Deskripsi</string>
     <string name="detail_order_success_message">Pesanan ditambahkan!</string>
     <string name="detail_order_error_message">Masukan jumlah terlebih dahulu!</string>
+    <string name="detail_total_order">Total: 0</string>
 
     <string name="menu_item_about_me">About Me</string>
 
@@ -25,4 +27,7 @@
 
     <string name="appreciation_text">Terima kasih</string>
     <string name="copyright_text">© All rights reserved.</string>
+    <string name="detail_btn_subtract_text">-</string>
+    <string name="detail_btn_add_text">+</string>
+    <string name="detail_cta_text">Tambah ke keranjang</string>
 </resources>

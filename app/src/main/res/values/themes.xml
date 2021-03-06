@@ -124,4 +124,36 @@
         <item name="layout_anchorGravity">bottom|right</item>
         <item name="maxImageSize">28dp</item>
     </style>
+
+
+    <!--  For Detail -->
+    <style name="FoodDetail.Title" parent="MyText.FoodItem.Title">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/margin_large</item>
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+    </style>
+
+    <style name="FoodDetail.Owner" parent="MyText.FoodItem.Owner">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_medium</item>
+        <item name="android:layout_marginEnd">@dimen/margin_medium</item>
+    </style>
+
+    <style name="FoodDetail.Location" parent="MyText.FoodItem.Owner">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:ellipsize">end</item>
+        <item name="maxLines">1</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="FoodDetail.Description" parent="MyText.FoodItem.Location">
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 </resources>
