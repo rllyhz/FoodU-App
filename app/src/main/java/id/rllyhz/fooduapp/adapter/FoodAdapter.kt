@@ -1,5 +1,6 @@
 package id.rllyhz.fooduapp.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +10,10 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import id.rllyhz.fooduapp.R
 import id.rllyhz.fooduapp.data.Food
+import id.rllyhz.fooduapp.helper.DataHelper
 
 class FoodAdapter(private val context: Context, private var foods: ArrayList<Food>) :
     RecyclerView.Adapter<FoodAdapter.ViewHolder>() {
@@ -20,8 +23,24 @@ class FoodAdapter(private val context: Context, private var foods: ArrayList<Foo
         return ViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n", "UseCompatLoadingForDrawables")
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val food = foods[position]
+
+        holder.tvFoodTitle.text = food.name
+        holder.tvFoodOwner.text = food.owner
+        holder.tvFoodLocation.text = food.location
+        holder.tvFoodDistance.text = "${food.distanceInKM} KM"
+        holder.tvFoodCost.text = "${DataHelper.costInStringFormatted(food.cost)} IDR"
+        holder.rbFoodRating.rating = food.rating
+
+        Glide.with(context)
+            .load(context.getDrawable(food.cover))
+            .into(holder.ivFoodCover)
+
+        holder.btnFoodCta.setOnClickListener {
+            onItemClickCallback?.ctaItemClicked(foods[position])
+        }
     }
 
     override fun getItemCount(): Int = foods.size
