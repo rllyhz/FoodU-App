@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import id.rllyhz.fooduapp.adapter.FoodAdapter
 import id.rllyhz.fooduapp.data.Food
@@ -26,8 +27,11 @@ class MainActivity : AppCompatActivity(), FoodAdapter.OnItemClickCallback {
     }
 
     private fun initUI() {
-        // rvFoodList = findViewById(R.id.rv_food_list)
-        // foodAdapter = FoodAdapter(this, DataHelper.foodList)
+        rvFoodList = findViewById(R.id.rv_food_list)
+        foodAdapter = FoodAdapter(this, DataHelper.foodList)
+
+        rvFoodList.layoutManager = GridLayoutManager(this, 1)
+        rvFoodList.adapter = foodAdapter
     }
 
     override fun ctaItemClicked(food: Food) {
