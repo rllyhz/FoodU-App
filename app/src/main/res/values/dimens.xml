@@ -5,6 +5,8 @@
     <dimen name="margin_medium">16dp</dimen>
     <dimen name="margin_large">24dp</dimen>
 
+    <dimen name="food_item_width">120dp</dimen>
+    <dimen name="food_item_height">140dp</dimen>
     <dimen name="food_item_container_size">210dp</dimen>
     <dimen name="food_item_bg_size">190dp</dimen>
 </resources>
