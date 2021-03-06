@@ -3,6 +3,9 @@ package id.rllyhz.fooduapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.recyclerview.widget.RecyclerView
 import id.rllyhz.fooduapp.adapter.FoodAdapter
@@ -29,5 +32,20 @@ class MainActivity : AppCompatActivity(), FoodAdapter.OnItemClickCallback {
 
     override fun ctaItemClicked(food: Food) {
         //
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        MenuInflater(this).inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_item_about_me -> {
+                startActivity(Intent(this@MainActivity, AboutActivity::class.java))
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }
