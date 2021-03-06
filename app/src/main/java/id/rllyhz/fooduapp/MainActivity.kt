@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), FoodAdapter.OnItemClickCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_FoodUApp)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO) // this app dosn't support dark mode
         setContentView(R.layout.activity_main)
 
         initUI()
