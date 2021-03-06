@@ -173,7 +173,7 @@
             android:id="@+id/tv_detail_food_cost"
             android:layout_width="0dp"
             android:layout_height="@dimen/detail_btn_height"
-            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_medium"
             android:background="@drawable/bg_grey_light_rounded"
             android:gravity="center"
             android:paddingHorizontal="@dimen/margin_medium"
